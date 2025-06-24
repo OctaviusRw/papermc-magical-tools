@@ -1,0 +1,107 @@
+# Custom Pickaxe Plugin Configuration
+
+# Plugin settings
+plugin:
+  # Whether to give the custom pickaxe to new players
+  give_on_first_join: true
+  
+  # Adaptive Magical Tool settings
+  tool:
+    # Display name of the tool
+    name: "Adaptive Magical Tool"
+    
+    # Material of the tool
+    material: "WOODEN_PICKAXE" # Starting form
+    
+    # Unbreakable and undropable settings
+    unbreakable: true
+    undropable: true
+    
+    # Adaptive features
+    adaptive:
+      enabled: true
+      morph_cooldown_ms: 100
+      auto_morph: true
+    
+    # Tool forms
+    forms:
+      pickaxe: "WOODEN_PICKAXE"
+      shovel: "WOODEN_SHOVEL"
+      axe: "WOODEN_AXE"
+      sword: "WOODEN_SWORD"
+    
+    # Enchantments for each tool type
+    enchantments:
+      pickaxe:
+        efficiency: 3
+        fortune: 2
+        unbreaking: 10
+      shovel:
+        efficiency: 3
+        fortune: 2
+        unbreaking: 10
+      axe:
+        efficiency: 3
+        fortune: 1
+        unbreaking: 10
+      sword:
+        sharpness: 3
+        looting: 2
+        unbreaking: 10
+    
+    # Special features
+    features:
+      lightning_mining:
+        enabled: true
+        area_size: "3x3x3"
+        visual_lightning: true
+        auto_collect: true
+      
+      lightning_protection:
+        enabled: true
+        immunity: true
+      
+      adaptive_morphing:
+        enabled: true
+        auto_detect: true
+        combat_morph: true
+      
+      tree_felling: true  # Automatically chop down entire trees including leaves
+      lightning_combat: true  # Lightning strikes when attacking with sword
+
+# Tree felling settings
+tree_felling:
+  max_logs: 100      # Maximum number of logs to fell in one tree
+  max_leaves: 200    # Maximum number of leaves to remove
+  include_leaves: true  # Whether to remove leaves as well as logs
+
+# Lightning combat settings
+lightning_combat:
+  extra_damage: 2.0  # Extra lightning damage (in half hearts)
+  visual_effect: true  # Show lightning effect on target
+  message: true      # Show damage message to player
+
+# Egg launcher settings
+egg_launcher:
+  damage: 20.0       # Damage per egg hit (in half hearts, 20.0 = 10 hearts)
+  explosion_effects: true  # Show explosion particles and sounds
+  lightning_effect: true   # Show lightning strike on hit
+  projectile_speed: 2.5    # Speed multiplier for egg projectiles
+
+# Messages
+messages:
+  first_join: "Welcome! You have been given a special Adaptive Magical Tool!"
+  inventory_full: "Your inventory is full! The pickaxe was dropped at your feet."
+  tool_given: "You have received the Adaptive Magical Tool!"
+  tool_morph: "🔄 Tool morphed to %tool%!"
+  lightning_mining: "⚡ Lightning Miner activated! Collected %count% items."
+  lightning_protection: "⚡ Your magical tool protects you from lightning!"
+  lightning_combat: "⚡ Lightning Strike! +%damage% lightning damage!"
+  tree_felling: "🌳 Tree felled! Collected %count% items from %logs% logs and %leaves% leaves."
+  egg_launcher_fire: "❄️ Snowball fired!"
+  egg_launcher_hit: "❄️💥 Snowball hit for %damage% hearts of damage!"
+  cannot_drop: "You cannot drop this special tool!"
+  no_permission: "You don't have permission to use this command!"
+  player_only: "This command can only be used by players!"
+  config_reloaded: "Configuration has been reloaded!"
+  unknown_command: "Unknown subcommand. Usage: /custompickaxe <give|reload>"

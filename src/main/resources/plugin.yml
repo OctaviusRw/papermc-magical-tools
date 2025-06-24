@@ -1,0 +1,21 @@
+name: CustomPickaxePlugin
+version: ${version}
+main: com.example.custompickaxe.CustomPickaxePlugin
+api-version: 1.21
+author: YourName
+description: A plugin that gives new players a custom wooden pickaxe
+website: https://example.com
+
+permissions:
+  custompickaxe.give:
+    description: Allows giving custom pickaxes to players
+    default: op
+  custompickaxe.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+
+commands:
+  custompickaxe:
+    description: Custom pickaxe plugin commands
+    usage: /custompickaxe <give|reload>
+    permission: custompickaxe.give
