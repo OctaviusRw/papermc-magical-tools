@@ -164,3 +164,7 @@ The plugin creates the following files in the `plugins/CustomPickaxePlugin/` dir
 ## License
 
 This plugin is provided as-is for educational and server use.
+
+## About
+
+A comprehensive PaperMC plugin featuring magical tools and weapons for Minecraft 1.21.4+. Originally a simple custom pickaxe, it has evolved into a full magical toolkit with adaptive morphing capabilities and devastating weapons.
